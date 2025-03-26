@@ -1,0 +1,369 @@
+import Test from "./test.mdx";
+
+export let doc = document;
+
+export function test() {
+    console.log(document);
+    console.log(doc);
+    console.log(sessionStorage);
+}
+
+export function test0() {
+    console.log(window);
+}
+
+export function test1() {
+    console.log(localStorage);
+}
+
+{test()}
+
+# Code Syntax Highlighting in MDX
+
+Here's a **JavaScript** $x^2$ code block:
+
+~~~cpp
+template<typename T>
+using ISet = __gnu_pbds::tree<T, __gnu_pbds::null_type, std::less<>, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
+~~~
+
+```vue
+<script setup lang="ts">
+import {RouterView} from 'vue-router'
+</script>
+
+<template>
+  <RouterView/>
+</template>
+
+<style scoped>
+</style>
+```
+
+$$
+a^2
+$$
+
+$$
+\cfrac{a}{b} = a \cdot b ^ {20}
+$$
+
+<Test/>
+
+# recma-imports-resolver
+Using with @mdx-js:
+```ts
+import {compile} from '@mdx-js/mdx'
+import recmaImportsResolver from "recma-imports-resolver";
+
+await compile(mdxContent /*MDX source*/, {
+  recmaPlugins: [recmaImportsResolver]
+})
+```
+or in vite.config.ts:
+```ts
+import {defineConfig} from 'vite'
+import mdx from '@mdx-js/rollup';
+import recmaImportsResolver from "recma-imports-resolver";
+
+export default defineConfig({
+    plugins: [
+        // other plugins
+        mdx({
+            recmaPlugins: [recmaImportsResolver],
+            // other options
+        })
+    ],
+    // other options
+})
+```
+
+# Coding utils
+
+1. [Onefetch - git](https://github.com/o2sh/onefetch/blob/main/docs/README.ru.md)
+
+2. [Gitpod - IDE](https://www.gitpod.io/)
+
+3. [Быстрые справочники для разработчиков](https://quickref.me/)
+
+4. [Animate code](https://www.hackreels.com/)
+
+5. [GitHub - hmgle/graftcp: A flexible tool for redirecting a given program TCP traffic to SOCKS5 or HTTP proxy.](https://github.com/hmgle/graftcp)
+
+6. [анализатор трафика на базе eBPF, который позволяет отслеживать сетевое взаимодействие отдельных процессов для HTTP, Redis, и MySQL трафика](https://github.com/hengyoush/kyanos)
+
+7. [visualising data structures and algorithms through animation - VisuAlgo](https://visualgo.net/en)
+
+8. [GitHub - github/gitignore: A collection of useful .gitignore templates](https://github.com/github/gitignore)
+
+9. [GitHub - evangelosmeklis/peepdb: CLI tool and python library to inspect databases fast.](https://github.com/PeepDB-dev/peepdb)
+
+10. [GitHub - inferablehq/inferable: Build reliable AI Workflows with humans in the loop.](https://github.com/inferablehq/inferable)
+
+11. [GitHub - Y2Z/monolith: ⬛️ CLI tool and library for saving complete web pages as a single HTML file](https://github.com/Y2Z/monolith)
+
+12. [GitHub - TwiN/gatus: ⛑ Automated developer-oriented status page](https://github.com/TwiN/gatus)
+
+13. [GitHub - watzon/goshot: 🎨 Create beautiful code screenshots with customizable styles](https://github.com/watzon/goshot)
+
+14. [Парсим сайты с защитой от ботов; Хабр](https://habr.com/ru/post/710982/)
+
+15. [GitHub - zackradisic/tether: WIP high-performance code editor inspired by Doom Emacs and neovim. Comes with explosions.](https://github.com/zackradisic/tether)
+
+16. https://jsoncrack.com/
+
+17. https://youtube.com/shorts/tFW1aNY7HZg?si=LYDogjL3U7vbwwVQ
+
+18. [GitHub - itsjunetime/tdf: A tui-based PDF viewer](https://github.com/itsjunetime/tdf)
+
+# VSCode plugins
+
+1. [ТОП-10 плагинов для VS Code в 2024](https://proglib.io/p/10-nezamenimyh-plaginov-dlya-vs-code-2024-06-24)
+
+# SQL
+
+1. https://www.sql-practice.com/
+
+2. https://youtube.com/shorts/TtXS6yHj5L0?si=IFkPl99qlelZ6bnm
+
+# Backend
+
+1. [Node.js](https://www.youtube.com/watch?v=tKM44vPHU0U)
+
+2. [Клиент-серверная архитектура; Хабр](https://habr.com/ru/articles/836464/)
+
+3. [Как объединить фронтенд с бэкендом и не сломать веб-приложение?](https://habr.com/ru/companies/selectel/articles/836228/)
+
+4. [XSS; SQL Injections](https://youtu.be/827vVw41IE0?si=4QFDZuiMkyOqHDly)
+
+5. [Convert Compose to Kubernetes](https://github.com/kubernetes/kompose)
+
+6. [GitHub - nbs-system/naxsi: NAXSI is an open-source, high performance, low rules maintenance WAF for NGINX](https://github.com/nbs-system/naxsi)
+
+# AI
+
+1. [Codesnippets — ИИ-мультитул для написания кода](https://codesnippets.ai/)
+
+2. [Photo editing](https://www.florafauna.ai/)
+
+3. [Image generating](https://preview.reve.art/)
+
+4. [ВЗЛОМ ChatGPT](https://x.com/me_irl/status/1901497992865071428?s=46&t=dUCVh9akIWxxNUIkrDJwJg)
+
+5. https://youtube.com/shorts/WPgfT4_kEqg?si=FuoZTob7Rx0vEepE
+
+6. [Взлом нейросетей](https://youtube.com/shorts/Q9nvwEXAWeM?si=5Ab6AaOusHbeZZqH)
+
+7. [Нейронка для работы с графиками и диаграммами](https://www.napkin.ai/)
+
+8. [Озвучка](https://www.openai.fm/)
+
+9. [NextChat — ИИ-ассистент](https://github.com/ChatGPTNextWeb/NextChat?tab=readme-ov-file)
+
+10. [Image generating](https://youtube.com/shorts/IX0oyZ4p7bA?si=A6MW7TNPosveYGG0)
+
+11. [Music generation](https://www.loudly.com/music/ai-music-generator)
+
+12. [Subtitles](https://withsubtitles.com/)
+
+13. [Mistral OCR | Mistral AI](https://mistral.ai/fr/news/mistral-ocr)
+
+14. [Video generation Pika 2.2](https://pika.art/login)
+
+15. [Бесплатный инструмент для редактирования фото]([MagicQuill - a Hugging Face Space by AI4Editing](https://huggingface.co/spaces/AI4Editing/MagicQuill))
+
+16. [Phind 2 search](https://www.phind.com/)
+
+17. [Pika swaps](https://pika.art/pikaswaps)
+
+18. [полезный ИИ для учебы](https://unstuckstudy.com/)
+
+19. [GitHub - n8n-io/self-hosted-ai-starter-kit: The Self-hosted AI Starter Kit is an open-source template that quickly sets up a local AI environment. Curated by n8n, it provides essential tools for creating secure, self-hosted AI workflows.](https://github.com/n8n-io/self-hosted-ai-starter-kit)
+
+20. [Photo editing](https://www.krea.ai/chat)
+
+21. [Remove background](https://backgrounderase.net/home)
+
+22. [GitHub - danilofalcao/jarvis: J.A.R.V.I.S. is an intelligent coding assistant that leverages multiple state-of-the-art language models to help you with code generation, modifications, and technical discussions.](https://github.com/danilofalcao/jarvis)
+
+23. [Music generation](https://www.riffusion.com/create)
+
+24. [PDF выжимка](https://pdfdino.com/)
+
+25. [GitHub - GaParmar/img2img-turbo: One-step image-to-image with Stable Diffusion turbo: sketch2image, day2night, and more](https://github.com/GaParmar/img2img-turbo)
+
+26. [Search](https://useconsensus.io/)
+
+27. [GitHub - DrewThomasson/ebook2audiobook: Convert ebooks to audiobooks with chapters and metadata using dynamic AI models and voice cloning. Supports 1,107+ languages!](https://github.com/DrewThomasson/ebook2audiobook)
+
+28. [AI Video Composer](https://huggingface.co/spaces/huggingface-projects/ai-video-composer)
+
+29. [GitHub - abi/screenshot-to-code: Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)](https://github.com/abi/screenshot-to-code)
+
+30. https://www.brainrot.run/
+
+31. [«очеловечит» сгенерированный текст](https://bexi.ai/)
+
+32. https://superbolt.geospy.ai/
+
+33. https://www.youlearn.ai/
+
+34. [Scira AI](https://mplx.run/search)
+
+35. [Search](https://devv.ai/)
+
+36. https://www.getsummer.ai/
+
+37. https://www.terif.ai/
+
+38. https://app.pixverse.ai/
+
+39. https://www.perplexity.ai/
+
+40. https://www.aiuncensored.info/
+
+# Send
+
+1. [Методы массивов в JavaScript: forEach, reduce, filter, map](https://thecode.media/metody-massivov-v-javascript/)
+
+2. [Vue](https://youtu.be/YiRt-MSfpZM)
+
+# Free soft
+
+1. https://youtube.com/shorts/zyCeGbApkZE?si=LTfHjmyYJzCpKklD
+
+2. https://openalternative.co/
+
+3. https://youtube.com/shorts/7mKGbxqmPNc?si=nW-oFOVIzXZ67KHl
+
+4. https://youtube.com/shorts/3SvHXplJkjE?si=J_P0Jaznzb6-GtPN
+
+# MC
+
+1. https://youtube.com/shorts/DlPgIZwTkuY?si=1qtBv989JYaHc7Oo
+
+2. https://youtube.com/shorts/ORLlur-Wu48?si=UVmTV2uRMlMYx2L2
+
+3. https://youtube.com/shorts/OrvMS1AYKX8?si=4ffYPkCfDi0YueXR
+
+4. https://youtube.com/shorts/rk2U1zdWYA8?si=STcgLVb2rtdN29vX
+
+# Games
+
+1. https://youtube.com/shorts/14f180BgyMg?si=A1DuEJ--TgoQ6xaH
+
+2. https://youtube.com/shorts/EK4xVSdK_l8?si=daVl49-g_Ll0tlJF
+
+3. [Убеди ИИ не уничтожить человечество](https://www.outsmart-ai.com/)
+
+4. https://artifactsmmo.com/
+
+5. https://youtube.com/shorts/bju7fmtwE_I?si=0v6IrgrL1y1p1rjh
+
+6. https://youtube.com/shorts/4lEmrJ99Yz8?si=SsrrpERBFfGW8tm0
+
+# Frontend
+
+1. https://youtube.com/shorts/TfhXxv9vBOI?si=EcnSyWU3f9BIhc20
+
+2. https://youtube.com/shorts/r6LtUxM5u_o?si=hoxJcnTsU8H3LmHC
+
+3. [Kimi k1.5](https://kimi.ai/)
+
+4. https://youtube.com/shorts/0h6VP8ZaS5s?si=iIA8AkJ3kuj1FHQ_
+
+5. https://motion-number.barvian.me/
+
+6. [Самые полезные библиотеки JS для красивых анимаций; Habr](https://habr.com/p/805737/)
+
+7. [Создание сайта с крутой анимацией скролла (HTML + CSS + GSAP)](https://youtu.be/zKjYfxei5vc?si=rYK0WYTuF9O3-dY5)
+
+8. [Inspira](https://inspira-ui.com/)
+
+9. [Flexbox Labs](https://flexboxlabs.netlify.app/)
+
+10. [Responsive Image Carousel](https://codepen.io/noirsociety/pen/ZEwLGXB)
+
+11. https://bulma.io/
+
+12. [GitHub - PaulleDemon/font-tester-chrome: Pick fonts for your website withiout breaking your head. Test fonts on live websites](https://github.com/PaulleDemon/font-tester-chrome)
+
+13. https://youtu.be/gQFZyN-0NxQ?si=SBwpHDIElGOm-3Ol
+
+14. [GitHub - moklick/frontend-stuff: 📝 A continuously expanded list of frameworks, libraries and tools I used/want to use for building things on the web. Mostly JavaScript.](https://github.com/moklick/frontend-stuff?tab=readme-ov-file)
+
+15. [GitHub - minimaxir/big-list-of-naughty-strings: The Big List of Naughty Strings is a list of strings which have a high probability of causing issues when used as user-input data.](https://github.com/minimaxir/big-list-of-naughty-strings?tab=readme-ov-file)
+
+16. https://youtu.be/fFKBm9cDYgk?si=OYNhXMmfkGjOOo6o
+
+17. [Grids](https://cssgrid-generator.netlify.app/)
+
+18. https://uiball.com/
+
+# ?
+
+1. https://coderun.yandex.ru/
+
+2. https://youtube.com/shorts/NYzdlJgGV9Q?si=5MpVZ9CJLKfhO7h2
+
+3. https://youtube.com/shorts/NhymUc8qJ5A?si=pl8EmK2KvOGUqweE
+
+4. [Архивные фото](https://pastvu.com/)
+
+5. https://youtube.com/shorts/DBvvt3Ldn-k?si=0WkOwxD1DQzc5wwA
+
+6. https://youtube.com/shorts/mdfy9m_U_5U?si=prYmWgGIj9HpxHfb
+
+7. https://youtube.com/shorts/-ham4ibpzsc?si=ebg6CBDIHbiNBwuI
+
+8. https://youtube.com/shorts/xgi87AvQJnQ?si=Bli2dAMszbiY9TI0
+
+9. [GitHub - test-zeus-ai/testzeus-hercules: Hercules is the world’s first open-source testing agent, enabling UI, API, Security, Accessibility, and Visual validations – all without code or maintenance. Automate testing effortlessly and let Hercules handle the heavy lifting! ⚡](https://github.com/test-zeus-ai/testzeus-hercules/)
+
+10. https://youtu.be/1a7r16gvfb8?si=IGKqfUxJarJQg8h0
+
+11. [Evil Twin Attack](https://youtu.be/MpunAfY_jx0?si=66vV9AJdQMPlNLGZ)
+
+12. [Сложно о простом. Как работает интернет. Часть 1. Что такое коммутатор, маршрутизатор и примеры работы простых сетей; Хабр](https://habr.com/ru/companies/timeweb/articles/871308/)
+
+13. [GitHub - Proxlight/Buildfy-Free: An easy and fast way to create a Python GUI 🐍 | This software allows you to create complex UI faster than ever⚡](https://github.com/Proxlight/Buildfy-Free)
+
+14. https://youtube.com/shorts/xTprHYMUm-8?si=7iJp1ozab9XEY9KZ
+
+15. https://youtube.com/shorts/8N8TuMXT_q8?si=h694Fw5_F8T9Yul0
+
+16. https://youtube.com/shorts/Mw_6At3DMz8?si=9ttPwfksZ012UwfX
+
+17. https://youtube.com/shorts/NhRg_f3k__I?si=05iFeNbJfhySeMAd
+
+18. https://youtube.com/shorts/-HFUNxce9Hc?si=626WFvBYrqlOU7io
+
+19. https://youtube.com/shorts/ifNFa3Vqt_U?si=NZXvoBidJ2lXwOqy
+
+# Films
+
+1. https://youtube.com/shorts/nmMfKJ6a0kA?si=JPEFSGCv_JCNoLYN
+
+2. https://youtube.com/shorts/e7Ibs_hwxR8?si=U-Shq27G9yFK1Z0v
+
+3. https://youtube.com/shorts/I6h_Pqk0s1U?si=Vl4FOhQUprpFO5iw
+
+# Utils
+
+1. [Turn any webpage into a desktop app with Rust](https://github.com/tw93/Pake?tab=readme-ov-file)
+
+2. [Install And Use Kali Linux With Gui In Termux](https://github.com/noob-hackers/kalimux)
+
+3. [GitHub - linuxserver/docker-resilio-sync](https://github.com/linuxserver/docker-resilio-sync)
+
+4. [GitHub - containers/bubblewrap: Low-level unprivileged sandboxing tool used by Flatpak and similar projects](https://github.com/containers/bubblewrap)
+
+5. [Ai prompts](https://www.promptengine.cc/)
+
+6. [GitHub - QuivrHQ/MegaParse: File Parser optimised for LLM Ingestion with no loss 🧠 Parse PDFs, Docx, PPTx in a format that is ideal for LLMs.](https://github.com/QuivrHQ/MegaParse)
+
+7. [GitHub - josephrmartinez/AskYouTube: Chrome extension that enables users to leverage the OpenAI Chat Completions endpoint on any YouTube video.](https://github.com/josephrmartinez/AskYouTube)
+
+8. [Get vdeo from web sites](https://cobalt.tools/)
+
+9. [GitHub - hyprland-community/awesome-hyprland: Awesome list for Hyprland [maintainer=@yavko]](https://github.com/hyprland-community/awesome-hyprland)

@@ -1,0 +1,30 @@
+{
+  "name": "article54",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd .. && bun run build && cd ./article54",
+    "clear": "rm -r ./types ./dist",
+    "cp": "cp ../../dist/types/article54 ./types -r && cp ../../dist-js/src/article54 ./dist -r",
+    "prepack": "bun run build && bun run clear && bun run cp"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.13.9",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "npm-run-all2": "^7.0.2",
+    "typescript": "~5.8.0",
+    "vite": "^6.2.1",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vue-tsc": "^2.2.8"
+  },
+  "files": ["./package.json", "./index.ts", "*.vue", "./dist", "./types"],
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts"
+}
