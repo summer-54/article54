@@ -1,3 +1,3 @@
-import Test_ from "@/article54/test.vue";
+import Article54_ from "@/article54/Article54.vue";
 
-export const Test = Test_;
+export const Article54 = Article54_;

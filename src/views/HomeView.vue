@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import {Test} from "@/article54/index.js";
+import {Article54} from "@/article54/index.js";
+import {defineAsyncComponent} from "vue";
+
+let Article = defineAsyncComponent({
+  loader: () => import("@/mdx/main.mdx")
+});
 </script>
 
 <template>
   <main>
-    <Test/>
+    <Article54>
+      <Article/>
+    </Article54>
   </main>
 </template>
