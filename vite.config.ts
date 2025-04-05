@@ -7,6 +7,10 @@ import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import recmaImportsResolver from "recma-imports-resolver";
 import recmaRestrictIdentifiers from "recma-restrict-identifiers";
+import rehypeHighlight from "rehype-highlight";
+import cpp from "highlight.js/lib/languages/cpp";
+import vueHljs from 'vue-highlight.js/lib/languages/vue';
+import {common} from 'lowlight';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -23,11 +27,10 @@ export default defineConfig({
     mdx({
       jsxRuntime: 'automatic',
       jsxImportSource: 'vue',
-      rehypePlugins: [rehypeKatex],
+      rehypePlugins: [rehypeKatex, () => rehypeHighlight({languages: {vue: vueHljs, "c++": cpp, ...common}})],
       remarkPlugins: [remarkMath],
       recmaPlugins: [
         recmaImportsResolver(source => {
-          console.log(source);
           if (source.endsWith(".mdx")) return source;
           if (source.startsWith("$") && !source.substring(2).includes("..")) return `article54/${source.substring(2)}`;
         }, "article54/403.vue"),
