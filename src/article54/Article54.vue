@@ -50,10 +50,6 @@ onMounted(() => {
 </template>
 
 <style module>
-.mdx {
-
-}
-
 .mdx .copy-button {
   background: #007bff;
   color: white;
