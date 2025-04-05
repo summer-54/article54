@@ -9,8 +9,15 @@ let Article = defineAsyncComponent({
 
 <template>
   <main>
-    <Article54>
+    <Article54 class="article">
       <Article/>
     </Article54>
   </main>
 </template>
+
+<style scoped>
+.article {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+</style>

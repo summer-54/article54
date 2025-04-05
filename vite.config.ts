@@ -40,7 +40,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      // @ts-ignore
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // @ts-ignore
       article54: fileURLToPath(new URL('./src/article54', import.meta.url))
     },
   },

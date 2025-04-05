@@ -13,8 +13,10 @@
   "dependencies": {
     "@mdx-js/rollup": "^3.1.0",
     "@mdx-js/vue": "^3.1.0",
+    "@primeuix/themes": "^1.0.1",
     "highlight.js": "^11.11.1",
     "katex": "^0.16.21",
+    "primevue": "^4.3.3",
     "recma-imports-resolver": "^0.0.5",
     "recma-restrict-identifiers": "^0.0.1",
     "rehype-highlight": "^7.0.2",

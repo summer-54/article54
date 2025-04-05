@@ -10,7 +10,7 @@
 
 <style scoped>
 div {
-  background-color: lightcoral;
+  background-color: #e76666;
   padding: 40px;
   border-radius: 20px;
   text-align: center;
