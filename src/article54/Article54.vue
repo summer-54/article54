@@ -2,7 +2,7 @@
 import {MDXProvider} from "@mdx-js/vue";
 import "katex/dist/katex.min.css";
 import "highlight.js/styles/base16/framer.min.css";
-import {onMounted, useCssModule, useTemplateRef, watch} from "vue";
+import {onMounted, useCssModule, useTemplateRef} from "vue";
 
 const mdx = useTemplateRef("mdx");
 const style = useCssModule();

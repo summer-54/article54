@@ -19,17 +19,7 @@ export default defineComponent({
 <!--&lt;!&ndash;    <article-renderer0 :data="elements"/>&ndash;&gt;-->
 <!--    <slot/>-->
 <!--  </glm-content-area>-->
-  <Panel :style="{'--p-panel-background': color}" class="colored">
+  <Panel :style="{'--p-panel-background': color, '--p-panel-header-padding': '0', '--p-panel-content-padding': '10px'}" class="colored">
     <slot/>
   </Panel>
 </template>
-
-<style>
-.colored .p-panel-header {
-  display: none;
-}
-
-.colored .p-panel-content {
-  padding: 10px;
-}
-</style>
