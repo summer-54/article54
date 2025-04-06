@@ -2,7 +2,39 @@
 import {MDXProvider} from "@mdx-js/vue";
 import "katex/dist/katex.min.css";
 import "highlight.js/styles/base16/framer.min.css";
-import {onMounted, useCssModule, useTemplateRef} from "vue";
+import {onMounted, type PropType, provide, useCssModule, useTemplateRef} from "vue";
+
+const props = defineProps({
+  attachmentsResolver: {
+    type: Function as PropType<(file: string) => string | Promise<string>>,
+    async default(file: string) {
+      // let data = await (await fetch(file, {method: "get"})).blob();
+      // let reader = new FileReader();
+      // reader.onload = () => {}
+      // return new Promise(resolve => {
+      //   reader.onload = () => resolve(reader.result);
+      //   reader.readAsDataURL(data);
+      // });
+      return file;
+    }
+  },
+  thumbnailsResolver: {
+    type: Function as PropType<(file: string) => string | Promise<string>>,
+    async default(file: string) {
+      // let data = await (await fetch(file, {method: "get"})).blob();
+      // let reader = new FileReader();
+      // reader.onload = () => {}
+      // return new Promise(resolve => {
+      //   reader.onload = () => resolve(reader.result);
+      //   reader.readAsDataURL(data);
+      // });
+      return file;
+    }
+  }
+});
+
+provide("attachmentsResolver", props.attachmentsResolver);
+provide("thumbnailsResolver", props.thumbnailsResolver);
 
 const mdx = useTemplateRef("mdx");
 const style = useCssModule();
