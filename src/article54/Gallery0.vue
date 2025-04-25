@@ -32,7 +32,7 @@ export default {
     };
   },
   methods: {
-    imageClick(index) {
+    imageClick(index: number) {
       this.activeIndex = index;
       this.displayCustom = true;
     }

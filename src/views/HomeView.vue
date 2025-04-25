@@ -3,6 +3,7 @@ import {Article54} from "@/article54/index.js";
 import {defineAsyncComponent} from "vue";
 
 let Article = defineAsyncComponent({
+  // @ts-ignore
   loader: () => import("@/mdx/main.mdx")
 });
 </script>
