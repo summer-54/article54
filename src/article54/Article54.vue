@@ -2,7 +2,9 @@
 import {MDXProvider} from "@mdx-js/vue";
 import "katex/dist/katex.min.css";
 import "highlight.js/styles/base16/framer.min.css";
-import {onMounted, type PropType, provide, useCssModule, useTemplateRef} from "vue";
+import {onMounted, type PropType, provide, useTemplateRef} from "vue";
+import style from "./main.module.css";
+import Spoiler from "@/article54/Spoiler.vue";
 
 const props = defineProps({
   attachmentsResolver: {
@@ -37,7 +39,6 @@ provide("attachmentsResolver", props.attachmentsResolver);
 provide("thumbnailsResolver", props.thumbnailsResolver);
 
 const mdx = useTemplateRef("mdx");
-const style = useCssModule();
 
 function addCodeCopyButtons() {
   if (!mdx.value) return;
@@ -74,39 +75,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <main ref="mdx" :class="$style.mdx">
-    <MDXProvider>
+  <main ref="mdx" :class="style.mdx">
+    <MDXProvider :components="{Spoiler}">
       <slot/>
     </MDXProvider>
   </main>
 </template>
-
-<style module>
-.mdx .copy-button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 10px 20px 10px 10px;
-  transition: background-color 0.2s;
-
-  @media (hover: hover) {
-    &:hover {
-      background: #0056b3;
-    }
-  }
-}
-
-.mdx pre code {
-  border-radius: 20px;
-}
-
-.mdx pre {
-  margin: 0;
-}
-
-.mdx > * {
-  margin-bottom: 10px !important;
-}
-</style>

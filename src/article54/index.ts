@@ -12,4 +12,5 @@ export const Spoiler = Spoiler_;
 export const Image = Image_;
 export const Gallery = Gallery_;
 
-export {TabPanel} from "primevue";
+import {TabPanel as TabPanel_} from "primevue";
+export const TabPanel = TabPanel_;

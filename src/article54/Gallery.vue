@@ -27,7 +27,3 @@ watch(props, () => getImages(), {deep: true});
 <template>
   <Gallery0 :images="images" :attachmentsResolver="attachmentsResolver"/>
 </template>
-
-<style scoped>
-
-</style>

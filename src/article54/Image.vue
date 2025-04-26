@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import {Image} from "primevue";
 import {onMounted, ref, watch, inject} from "vue";
+import style from "./main.module.css";
 
 const props = defineProps({
   src: {
@@ -25,20 +26,7 @@ watch(props, () => getImage(), {deep: true});
 </script>
 
 <template>
-  <div class="container">
-    <Image v-if="src" :src="src" :alt="props.alt" preview :class="$style.img"/>
+  <div :class="style.imgContainer">
+    <Image v-if="src" :src="src" :alt="props.alt" preview :class="style.img"/>
   </div>
 </template>
-
-<style scoped>
-.container {
-  text-align: center;
-}
-</style>
-
-<style module>
-.img > * {
-  max-width: 100%;
-  border-radius: 50px;
-}
-</style>

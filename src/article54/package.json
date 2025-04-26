@@ -1,12 +1,12 @@
 {
   "name": "article54",
-  "version": "0.0.2",
+  "version": "0.0.12",
   "private": false,
   "type": "module",
   "scripts": {
     "build": "cd .. && bun run build && cd ./article54",
     "clear": "rm -r ./types ./dist",
-    "cp": "cp ../../dist/types/article54 ./types -r && cp ../../dist-js/src/article54 ./dist -r && bun run cp-export-helper",
+    "cp": "cp ../../dist/types/article54 ./types -r && cp ../../dist-js/src/article54 ./dist -r && bun run cp-export-helper && cp ./main.module.css ./dist/main.module.css",
     "cp-export-helper": "mkdir ./dist/_virtual && cp ../../dist-js/_virtual/_plugin-vue_export-helper.js ./dist/_virtual/_plugin-vue_export-helper.js",
     "prepack": "bun run build && bun run clear && bun run cp && bun ./prepack.js"
   },
